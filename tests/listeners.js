@@ -1,3 +1,4 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -21,7 +22,7 @@
 // USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 var assert = require('assert');
-var events = require('../');
+var events = require('events/');
 
 function listener() {}
 function listener2() {}
@@ -49,3 +50,5 @@ var e3ListenersCopy = e3.listeners('foo');
 e3.on('foo', listener2);
 assert.deepEqual(e3.listeners('foo'), [listener, listener2]);
 assert.deepEqual(e3ListenersCopy, [listener]);
+
+return module.exports;});

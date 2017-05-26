@@ -1,3 +1,4 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -20,7 +21,7 @@
 // USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 var assert = require('assert');
-var events = require('../');
+var events = require('events/');
 
 var e = new events.EventEmitter(),
     num_args_emited = [];
@@ -42,3 +43,5 @@ e.emit('numArgs', null, null, null, null, null);
 
 assert.deepEqual([0, 1, 2, 3, 4, 5], num_args_emited);
 
+
+return module.exports;});

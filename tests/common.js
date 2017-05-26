@@ -1,3 +1,4 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 var assert = require('assert');
 
 var mustCallChecks = [];
@@ -40,3 +41,5 @@ exports.mustCall = function(fn, expected) {
     return fn.apply(this, arguments);
   };
 };
+
+return module.exports;});

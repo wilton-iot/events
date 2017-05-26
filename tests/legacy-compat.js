@@ -1,3 +1,4 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 // sigh... life is hard
 if (!global.console) {
     console = {}
@@ -16,3 +17,5 @@ if (!Array.isArray) {
         return Object.prototype.toString.call(arr) === '[object Array]';
     }
 }
+
+return module.exports;});

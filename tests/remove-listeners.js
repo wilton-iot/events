@@ -1,3 +1,4 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -19,9 +20,9 @@
 // OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
 // USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-var common = require('./common');
+var common = require('events/tests/common');
 var assert = require('assert');
-var events = require('../');
+var events = require('events/');
 
 var count = 0;
 
@@ -82,3 +83,5 @@ e4.on('removeListener', common.mustCall(function(name, cb) {
 e4.on('quux', remove1);
 e4.on('quux', remove2);
 e4.removeListener('quux', remove1);
+
+return module.exports;});

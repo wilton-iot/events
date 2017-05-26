@@ -1,3 +1,4 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -300,3 +301,5 @@ function isObject(arg) {
 function isUndefined(arg) {
   return arg === void 0;
 }
+
+return module.exports;});

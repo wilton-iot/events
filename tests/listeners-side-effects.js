@@ -1,3 +1,4 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -21,7 +22,7 @@
 // USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 var assert = require('assert');
-var EventEmitter = require('../').EventEmitter;
+var EventEmitter = require('events/').EventEmitter;
 
 var e = new EventEmitter;
 var fl;  // foo listeners
@@ -53,3 +54,5 @@ assert(Array.isArray(fl));
 assert(fl.length === 2);
 assert(fl[0] === assert.fail);
 assert(fl[1] === assert.ok);
+
+return module.exports;});
