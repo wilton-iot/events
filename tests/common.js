@@ -1,4 +1,6 @@
 define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var test = require("tape-compat");
+var after = test.after;
 var assert = require('assert');
 
 var mustCallChecks = [];

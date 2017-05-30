@@ -1,5 +1,6 @@
 define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 
+var test = require("tape-compat");
 require('events/tests/legacy-compat');
 
 // we do this to easily wrap each file in a mocha test
