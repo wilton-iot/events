@@ -29,5 +29,10 @@
   "scripts": {
     "test": "mocha --ui qunit -- tests/index.js && zuul -- tests/index.js"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "wilton": {
+    "excludes": [
+      "tests"
+    ]
+  }
 }
