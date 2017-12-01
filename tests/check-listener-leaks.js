@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -21,7 +21,7 @@ define(function(){var require = WILTON_requiresync;var module = {exports: {}};va
 // USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 var assert = require('assert');
-var events = require('events/');
+var events = require('events');
 
 var e = new events.EventEmitter();
 
@@ -86,4 +86,4 @@ assert.ok(e._events['uno'].hasOwnProperty('warned'));
 // chainable
 assert.strictEqual(e, e.setMaxListeners(1));
 
-return module.exports;});
+require = requireOrig;});

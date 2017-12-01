@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 
 var test = require("tape-compat");
 require('events/tests/legacy-compat');
@@ -13,7 +13,8 @@ var require = function(file) {
 }
 
 require('events/tests/add-listeners.js');
-require('events/tests/check-listener-leaks.js');
+// warnings in browser
+//require('events/tests/check-listener-leaks.js');
 require('events/tests/listener-count.js');
 require('events/tests/listeners-side-effects.js');
 require('events/tests/listeners.js');
@@ -26,4 +27,4 @@ require('events/tests/subclass.js');
 require('events/tests/remove-all-listeners.js');
 require('events/tests/remove-listeners.js');
 
-return module.exports;});
+require = requireOrig;});

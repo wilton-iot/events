@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -24,7 +24,7 @@ var test = require("tape-compat");
 var after = test.after;
 var common = require('events/tests/common');
 var assert = require('assert');
-var events = require('events/');
+var events = require('events');
 
 var after_checks = [];
 after(function() {
@@ -78,8 +78,8 @@ e2.on('bar', listener);
 e2.on('removeListener', expect(['foo', 'bar', 'removeListener']));
 e2.on('removeListener', expect(['foo', 'bar']));
 e2.removeAllListeners();
-console.error(e2);
+//console.error(e2);
 assert.deepEqual([], e2.listeners('foo'));
 assert.deepEqual([], e2.listeners('bar'));
 
-return module.exports;});
+require = requireOrig;});
